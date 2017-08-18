@@ -1,4 +1,6 @@
 # BerlinClock
-BerlinClock rep
-This is simple AWT based application of Berlin clock. 
-More about it: https://en.wikipedia.org/wiki/Mengenlehreuhr
+Title: BerlinClock
+
+This is simple AWT-based Applet application of Berlin clock in Java. 
+Createrd just for training.
+More about the clock: https://en.wikipedia.org/wiki/Mengenlehreuhr
