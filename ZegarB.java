@@ -1,5 +1,5 @@
-/*  Program zegar Berlinski
- * zasada dzialania zegara:
+/*  Berlin clock
+ * The principle of operation:
  * https://en.wikipedia.org/wiki/Mengenlehreuhr
  */
 
@@ -15,7 +15,7 @@ public class ZegarB extends Applet implements Runnable {
 	boolean flaga = false;
 	String zeg;
 	int h, m, s ;
-	//**************** MYSZ - wspolrzedne *********************
+	//**************** MOUSE - co-ordinates *********************
 	public void init(){
 		addMouseMotionListener(new MouseMotionAdapter(){ 
 			public void mouseMoved(MouseEvent me){
@@ -55,7 +55,7 @@ public class ZegarB extends Applet implements Runnable {
 	public void paint (Graphics g){
 		g.drawString(zeg, 10, 20);
 		
-		// ***********  sekundy - kolko *************
+		// ***********  seconds - circle *************
 		if(s%2 == 0){
 			g.setColor(Color.ORANGE);
 			g.fillOval(30,30,30,30);
@@ -67,8 +67,8 @@ public class ZegarB extends Applet implements Runnable {
 		g.setColor(Color.BLACK);
 		g.drawString("SEKUNDY", 140, 40);
 		
-		// *************godziny - pierwsza linia *******************
-		// 1 prostok¹t
+		// *************hours - first line *******************
+		// 1 prostokÅ¡t
 		g.setColor(Color.BLACK);
 		g.drawRoundRect(10,65,15,30,2,2);
 		if (h>=5){
@@ -97,7 +97,7 @@ public class ZegarB extends Applet implements Runnable {
 			g.fillRoundRect(70, 65, 15, 30, 2, 2);
 		}
 		
-		// ************ godziny - druga linia ****************
+		// ************ hours - second linie ****************
 		//1
 		g.setColor(Color.BLACK);
 		g.drawRoundRect(10,100,15,30,2,2);
@@ -142,7 +142,7 @@ public class ZegarB extends Applet implements Runnable {
 		}
 		g.setColor(Color.BLACK);
 		g.drawString("GODZINY", 140, 90);
-		// ********** minuty **************
+		// ********** minutes **************
 		g.setColor(Color.BLACK);
 		g.drawRoundRect(10, 140, 10, 20, 2, 2); //1
 		g.drawRoundRect(22, 140, 10, 20, 2, 2); //2
@@ -300,7 +300,7 @@ public class ZegarB extends Applet implements Runnable {
 						}
 				g.setColor(Color.BLACK);
 				g.drawString("MINUTY", 145, 150);
-		// *************  MINUTY - druga linia**********************8
+		// *************  MINUTES - second linie**********************
 				//1
 				g.setColor(Color.BLACK);
 				g.drawRoundRect(10,170,18,40,2,2);
